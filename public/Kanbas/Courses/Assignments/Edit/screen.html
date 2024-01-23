@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table cellpadding="20">
+        <tr>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Account/Navigation/index.html">
+                            Account</a></li>
+                    <li>
+                        <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Calendar/index.html">Calendar</a>
+                    </li>
+                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
+                    <li>
+                        <a href="/Kanbas/History/Home/screen.html">History</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Studio/Home/screen.html">Studio</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Commons/Home/screen.html">Commons</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Help/Home/screen.html">Help</a>
+                    </li>
+                
+                </ul>
+            </td valign="top">
+
+            <td valign="top">
+                <ul>
+                    <li><a href="/Home/index.html">Home</a></li>
+                    <li><a href="/Modules/index.html">Modules</a></li>
+                    <li><a href="/Piazza/index.html">Piazza</a></li>
+                    <li><a href="/ZoomMeetings/index.html">Zoom Meetings</a></li>
+                    <li><a href="/Assignments/index.html">Assignments</a></li>
+                    <li><a href="/Quizzes/index.html">Quizzes</a></li>
+                    <li><a href="/Grades/index.html">Grades</a></li>
+                    <li><a href="/People/index.html">People</a></li>
+                    <li><a href="/PanoptoVideo/index.html">Panopto Video</a></li>
+                    <li><a href="/Discussions/index.html">Discussions</a></li>
+                    <li><a href="/Announcements/index.html">Announcements</a></li>
+                    <li><a href="/Pages/index.html">Pages</a></li>
+                    <li><a href="/Files/index.html">Files</a></li>
+                    <li><a href="/Rubrics/index.html">Rubrics</a></li>
+                    <li><a href="/Outcomes/index.html">Outcomes</a></li>
+                    <li><a href="/Collaborations/index.html">Collaborations</a></li>
+                    <li><a href="/Syllabus/index.html">Syllabus</a></li>
+                    <li><a href="/Settings/index.html">Settings</a></li>
+                </ul>
+            </td valign="top">
+
+            <td>
+                <select id="speedGrader" name="speedGrader">
+                    <option value="" disabled selected>SpeedGrader</option>
+                  </select>
+              
+                  <hr>
+              
+                  <h1>Assignment Name</h1>
+              
+                  <input
+                    type="text"
+                    id="assignmentName"
+                    name="assignmentName"
+                    value="A1 - ENV + HTML"
+                  />
+              
+                  <br />
+                  <br />
+              
+                  <input
+                    type="text"
+                    id="assignmentDescription"
+                    name="assignmentDescription"
+                    value="this is the assignment description"
+                    size="50"
+                  />
+              
+                  <br />
+              
+                  <p>
+                    Points
+                    <br />
+                    <input type="text" id="pointsInput" name="points" value="100" />
+                  </p>
+              
+                  <p>
+                    Assignment Group <br />
+                    <select id="assignmentGroup" name="assignmentGroup">
+                      <option value="" disabled selected>ASSIGNMENTS</option>
+                    </select>
+                  </p>
+              
+                  <p>
+                    Display grade as
+                    <br />
+                    <select id="displayGradeAs" name="displayGradeAs">
+                      <option value="" disabled selected>Percentage</option>
+                    </select>
+                  </p>
+              
+                  <p>
+                    Submission Type
+                    <br />
+                    <select id="submissionType" name="submissionType">
+                      <option value="" disabled selected>Online</option>
+                    </select>
+                  </p>
+              
+                  <p>
+                    Online Entry Options
+                    <br />
+                    <input
+                      type="checkbox"
+                      id="textEntry"
+                      name="textEntry"
+                      value="Text Entry"
+                    />
+                    <label for="textEntry">Text Entry</label>
+                    <br />
+              
+                    <input
+                      type="checkbox"
+                      id="websiteURL"
+                      name="websiteURL"
+                      value="Website URL"
+                    />
+                    <label for="websiteURL">Website URL</label>
+              
+                    <br />
+              
+                    <input
+                      type="checkbox"
+                      id="mediaRecordings"
+                      name="mediaRecordings"
+                      value="Media Recordings"
+                    />
+                    <label for="mediaRecordings">Media Recordings</label>
+              
+                    <br />
+              
+                    <input
+                      type="checkbox"
+                      id="studentAnnotation"
+                      name="studentAnnotation"
+                      value="Student Annotation"
+                    />
+                    <label for="studentAnnotation">Student Annotation</label>
+              
+                    <br />
+              
+                    <input
+                      type="checkbox"
+                      id="fileUploads"
+                      name="fileUploads"
+                      value="File Uploads"
+                    />
+                    <label for="fileUploads">File Uploads</label>
+                  </p>
+              
+                  <p>Assign <br />Assign to</p>
+                  <input type="text" id="assignTo" name="assignTo" value="Everyone" />
+              
+                  <p>
+                    Due
+                    <br />
+                    <input type="date" name="dueDate" id="dueDate" value="2021-01-01" />
+                  </p>
+              
+                  <p>
+                    Available from <br />
+              
+                    <input
+                      type="date"
+                      name="availableFrom"
+                      id="availableFrom"
+                      value="2021-01-01"
+                    />
+                  </p>
+              
+                  <p>
+                    Until <br />
+                    <input type="date" name="untilDate" id="untilDate" value="2022-01-01" />
+                  </p>
+              
+                  <button>Cancel</button>
+                  <button>Save</button>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
