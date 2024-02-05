@@ -1,206 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <table cellpadding="20">
-        <tr>
-            <td valign="top">
-                <ul>
-                    <li><a href="/Kanbas/Account/Navigation/index.html">
-                            Account</a></li>
-                    <li>
-                        <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Calendar/index.html">Calendar</a>
-                    </li>
-                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-                    <li>
-                        <a href="/Kanbas/History/Home/screen.html">History</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Studio/Home/screen.html">Studio</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Commons/Home/screen.html">Commons</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Help/Home/screen.html">Help</a>
-                    </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/home.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/home.css">
+    <meta charset="UTF-8" />
+    <title>Bootstrap Sidebar Layout</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Add your custom styles here */
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- First Sidebar -->
+        <div class="col-md-auto text-light ">
+          <ul class="wd-kanbas-navigation">
+            <li>
+              <a href="/Kanbas/Account/Navigation/index.html">
+                <img
+                  src="/img/northeastern.png"
+                  class="logo_image"
+                  alt="Northeastern Logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="/Kanbas/Account/Navigation/index.html"
+                ><i class="fa fa-user fa-2x white-icon"></i> Account</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Dashboard/screen.html"
+                ><i class="fa fa-dashboard fa-2x red-icon"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Courses/Home/screen.html"
+                ><i class="fa fa-graduation-cap fa-2x red-icon"></i> Courses</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Calendar/index.html"
+                ><i class="fa fa-calendar fa-2x red-icon"></i> Calendar</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Inbox/index.html"
+                ><i class="fa fa-inbox fa-2x red-icon"></i> Inbox</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/History/Home/screen.html"
+                ><i class="fa fa-history fa-2x red-icon"></i> History</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Studio/Home/screen.html"
+                ><i class="fa fa-pencil fa-2x red-icon"></i> Studio</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Commons/Home/screen.html"
+                ><i class="fa fa-users fa-2x red-icon"></i> Commons</a
+              >
+            </li>
+            <li>
+              <a href="/Kanbas/Help/Home/screen.html"
+                ><i class="fa fa-question-circle fa-2x red-icon"></i> Help</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Second Sidebar -->
+        <div class="col-md-auto text-light p-0">
+            
+            <ul class="wd-navigation">
+                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                <li class="wd-active"><a href="/Modules/index.html">Modules</a></li>
+                <li><a href="/Piazza/index.html">Piazza</a></li>
+                <li><a href="/ZoomMeetings/index.html">Zoom Meetings</a></li>
+                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                <li><a href="/Quizzes/index.html">Quizzes</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li><a href="/People/index.html">People</a></li>
+                <li><a href="/PanoptoVideo/index.html">Panopto Video</a></li>
+                <li><a href="/Discussions/index.html">Discussions</a></li>
+                <li><a href="/Announcements/index.html">Announcements</a></li>
+                <li><a href="/Pages/index.html">Pages</a></li>
+                <li><a href="/Files/index.html">Files</a></li>
+                <li><a href="/Rubrics/index.html">Rubrics</a></li>
+                <li><a href="/Outcomes/index.html">Outcomes</a></li>
+                <li><a href="/Collaborations/index.html">Collaborations</a></li>
+                <li><a href="/Syllabus/index.html">Syllabus</a></li>
+                <li><a href="/Kanbas/Settings/index.html">Settings</a></li>
+              </ul>
+    
+        </div>
+        <!-- Main Content -->
+        <div class="col-md p-0 mt-3">
+          <div class="container">
+              <div class="col-md p-0">
+                  <div class="form-group">
+                      <label for="assignmentName">Assignment Name</label>
+                      <input type="text" class="form-control" id="assignmentName" name="assignmentName" value="A1 - ENV + HTML">
+                  </div>
+          
+                  <div class="form-group">
+                      <label for="assignmentDescription">Description</label>
+                      <textarea class="form-control" id="assignmentDescription" name="assignmentDescription" rows="3">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.</textarea>
+                  </div>
+          
+                   <!-- Center align container -->
+                   <div class="row form-group">
+                    <div class="col-sm-2">
+                        <label for="pointsInput" class="col-form-label">Points</label>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="pointsInput" name="points" value="100">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="assignmentGroup" class="col-sm-2 col-form-label">Assignment Group</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="assignmentGroup" name="assignmentGroup">
+                      <option selected>ASSIGNMENTS</option>
+                      <option value="group1">Group 1</option>
+                      <option value="group2">Group 2</option>
+                      <option value="group3">Group 3</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                  </div>
+                </div>
                 
-                </ul>
-            </td valign="top">
-
-            <td valign="top">
-                <ul>
-                    <li><a href="/Home/index.html">Home</a></li>
-                    <li><a href="/Modules/index.html">Modules</a></li>
-                    <li><a href="/Piazza/index.html">Piazza</a></li>
-                    <li><a href="/ZoomMeetings/index.html">Zoom Meetings</a></li>
-                    <li><a href="/Assignments/index.html">Assignments</a></li>
-                    <li><a href="/Quizzes/index.html">Quizzes</a></li>
-                    <li><a href="/Grades/index.html">Grades</a></li>
-                    <li><a href="/People/index.html">People</a></li>
-                    <li><a href="/PanoptoVideo/index.html">Panopto Video</a></li>
-                    <li><a href="/Discussions/index.html">Discussions</a></li>
-                    <li><a href="/Announcements/index.html">Announcements</a></li>
-                    <li><a href="/Pages/index.html">Pages</a></li>
-                    <li><a href="/Files/index.html">Files</a></li>
-                    <li><a href="/Rubrics/index.html">Rubrics</a></li>
-                    <li><a href="/Outcomes/index.html">Outcomes</a></li>
-                    <li><a href="/Collaborations/index.html">Collaborations</a></li>
-                    <li><a href="/Syllabus/index.html">Syllabus</a></li>
-                    <li><a href="/Settings/index.html">Settings</a></li>
-                </ul>
-            </td valign="top">
-
-            <td>
-                <select id="speedGrader" name="speedGrader">
-                    <option value="" disabled selected>SpeedGrader</option>
-                  </select>
-              
-                  <hr>
-              
-                  <h1>Assignment Name</h1>
-              
-                  <input
-                    type="text"
-                    id="assignmentName"
-                    name="assignmentName"
-                    value="A1 - ENV + HTML"
-                  />
-              
-                  <br />
-                  <br />
-              
-                  <input
-                    type="text"
-                    id="assignmentDescription"
-                    name="assignmentDescription"
-                    value="this is the assignment description"
-                    size="50"
-                  />
-              
-                  <br />
-              
-                  <p>
-                    Points
-                    <br />
-                    <input type="text" id="pointsInput" name="points" value="100" />
-                  </p>
-              
-                  <p>
-                    Assignment Group <br />
-                    <select id="assignmentGroup" name="assignmentGroup">
-                      <option value="" disabled selected>ASSIGNMENTS</option>
+                <div class="form-group row">
+                  <label for="displayGradeAs" class="col-sm-2 col-form-label">Display Grade as</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="displayGradeAs" name="displayGradeAs">
+                      <option selected>Percentage</option>
+                      <option value="points">Points</option>
+                      <option value="letter">Letter Grade</option>
+                      <option value="complete">Complete/Incomplete</option>
+                      <!-- Add more options as needed -->
                     </select>
-                  </p>
+                  </div>
+                </div>
+                
               
-                  <p>
-                    Display grade as
-                    <br />
-                    <select id="displayGradeAs" name="displayGradeAs">
-                      <option value="" disabled selected>Percentage</option>
-                    </select>
-                  </p>
+                      <!-- Add more form groups for each input field as needed -->
               
-                  <p>
-                    Submission Type
-                    <br />
-                    <select id="submissionType" name="submissionType">
-                      <option value="" disabled selected>Online</option>
-                    </select>
-                  </p>
-              
-                  <p>
-                    Online Entry Options
-                    <br />
-                    <input
-                      type="checkbox"
-                      id="textEntry"
-                      name="textEntry"
-                      value="Text Entry"
-                    />
-                    <label for="textEntry">Text Entry</label>
-                    <br />
-              
-                    <input
-                      type="checkbox"
-                      id="websiteURL"
-                      name="websiteURL"
-                      value="Website URL"
-                    />
-                    <label for="websiteURL">Website URL</label>
-              
-                    <br />
-              
-                    <input
-                      type="checkbox"
-                      id="mediaRecordings"
-                      name="mediaRecordings"
-                      value="Media Recordings"
-                    />
-                    <label for="mediaRecordings">Media Recordings</label>
-              
-                    <br />
-              
-                    <input
-                      type="checkbox"
-                      id="studentAnnotation"
-                      name="studentAnnotation"
-                      value="Student Annotation"
-                    />
-                    <label for="studentAnnotation">Student Annotation</label>
-              
-                    <br />
-              
-                    <input
-                      type="checkbox"
-                      id="fileUploads"
-                      name="fileUploads"
-                      value="File Uploads"
-                    />
-                    <label for="fileUploads">File Uploads</label>
-                  </p>
-              
-                  <p>Assign <br />Assign to</p>
-                  <input type="text" id="assignTo" name="assignTo" value="Everyone" />
-              
-                  <p>
-                    Due
-                    <br />
-                    <input type="date" name="dueDate" id="dueDate" value="2021-01-01" />
-                  </p>
-              
-                  <p>
-                    Available from <br />
-              
-                    <input
-                      type="date"
-                      name="availableFrom"
-                      id="availableFrom"
-                      value="2021-01-01"
-                    />
-                  </p>
-              
-                  <p>
-                    Until <br />
-                    <input type="date" name="untilDate" id="untilDate" value="2022-01-01" />
-                  </p>
-              
-                  <button>Cancel</button>
-                  <button>Save</button>
+                <div class="form-group row">
+                        <label for="displayGradeAs" class="col-sm-2 col-form-label">Assign</label>
+                        <div class="col-sm-10">
+                          <div class="container border p-3">
+                            <div class="form-group">
+                                <label for="assignTo">Assign to</label>
+                                <input type="text" class="form-control" id="assignTo" name="assignTo" value="Everyone">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="dueDate">Due</label>
+                                <input type="date" class="form-control" name="dueDate" id="dueDate" value="2023-09-18">
+                            </div>
+                    
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="availableFrom">Available from</label>
+                                    <input type="date" class="form-control" name="availableFrom" id="availableFrom" value="2023-09-06">
+                                </div>
+                                <div class="col">
+                                    <label for="untilDate">Until</label>
+                                    <input type="date" class="form-control" name="untilDate" id="untilDate" value="2023-09-18">
+                                </div>
+                            </div>
+                            
+                    
+          
+                          </div> 
+                            
+                        </div>
+                    </div>
 
-            </td>
-        </tr>
 
-    </table>
-</body>
+
+                    <div class="form-group text-right">
+                      <button class="btn btn-secondary">Cancel</button>
+                      <button class="btn btn-primary">Save</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+        <!-- Right Sidebar -->
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

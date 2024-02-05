@@ -1,0 +1,44 @@
+.course-container .col {
+  flex: 0 0 calc((100% - 20px) / 4); /* Calculating the width for lg screens (4 courses per row) */
+  max-width: 270px; /* Maximum width */
+  min-width: 250px; /* Minimum width */
+  margin: 10px; /* Adjust margin as needed */
+}
+
+.course-container .row {
+  margin-top: 30px; /* Adjust top margin */
+  margin-bottom: 30px; /* Adjust bottom margin */
+}
+
+.course-container{
+    padding:50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto; /* Two columns */
+  grid-gap: 10px; /* Gap between grid items */
+}
+.grid-item {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.container {
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sidebar {
+    width: auto;
+    background-color: black
+}
+
+.main-content h1,
+.main-content h2 {
+    padding: 10px;
+    padding-left: 50px;
+}
+

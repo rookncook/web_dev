@@ -1,0 +1,11 @@
+/* styles.css */
+.list-group-item {
+    background-color: #f8f9fa; /* A light grey background */
+    border: 1px solid #ddd; /* A subtle border */
+}
+
+.list-group-item .fa-check-circle {
+    margin-right: 5px; /* Add some space between the check icon and the text */
+}
+
+/* Add any additional styles you need here */

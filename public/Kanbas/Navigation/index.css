@@ -1,0 +1,76 @@
+/* navigation.css */
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80px; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align to the start of the flex container (left side) */
+  align-items: center; /* Align items to the center horizontally */
+}
+
+.wd-kanbas-navigation li {
+  padding: 5px; /* Use relative units */
+  margin-bottom: 5px; /* Use relative units */
+  font-size: 0.8em;
+  text-align: center;
+  margin: 5px;
+}
+
+.red-icon {
+  color: red;
+  font-size: 2em; /* Adjust icon size as needed */
+  margin-bottom: 0.5rem; /* Use relative units */
+  padding-bottom: 10px;
+}
+
+.white-icon{
+  color: white;
+  font-size: 2em; /* Adjust icon size as needed */
+  margin-bottom: 0.5rem; /* Use relative units */
+  padding-bottom: 10px;
+
+}
+
+.wd-kanbas-navigation li:nth-child(2):hover i {
+  color: red;
+}
+
+
+.wd-kanbas-navigation li.wd-active,
+.wd-kanbas-navigation li:hover {
+  background-color: white;
+}
+
+.wd-kanbas-navigation li.wd-active,
+.wd-kanbas-navigation li:hover {
+  background-color: white;
+}
+
+.wd-kanbas-navigation li.wd-active a,
+.wd-kanbas-navigation li:hover a {
+  color: red;
+  background-color: white;
+}
+
+
+
+.wd-kanbas-navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.wd-kanbas-navigation a i {
+  display: block; /* Make icons display as block elements */
+  margin-bottom: 0.5rem; /* Use relative units */
+}
+
+/* styles.css */
+.logo_image {
+  width: 4.5rem; /* Use relative units */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0; /* Use relative units */
+}
