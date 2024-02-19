@@ -1,0 +1,31 @@
+.container1 {
+    display: flex;
+    justify-content: flex-end; 
+    /* Align icons to the right */
+  }
+  
+  .icons-container {
+    display: flex;
+    padding-top: 30px;
+  }
+  
+  .icon {
+    margin-right: 2px;
+ /* Adjust spacing between icons */
+    font-size: 24px;
+     /* Adjust icon size */
+  }
+  
+  .green-tick {
+    color: green; /* Set color for the green tick */
+  }
+  .icon-text {
+    padding-right: 15px;
+    font-size: 16px; /* Adjust text size */
+    line-height: 24px; /* Match line height with icon */
+    color: #333; /* Set text color */
+  }
+
+  .btn_container{
+    padding-top: 10px;
+  }
