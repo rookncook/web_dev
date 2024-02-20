@@ -10,8 +10,10 @@ function Grades() {
   return (
     <div>
       <h1>Grades</h1>
-      <div className="table-responsive">
-        <table className="table">
+      <div className="row">
+              <div className="col">
+                <div className="container mt-4">
+                  <table className="table table-striped table-bordered table-hover">
           <thead>
             <tr> {/* Corrected to include tr tag */}
               <th>Student Name</th>
@@ -38,6 +40,8 @@ function Grades() {
           </tbody>
         </table>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

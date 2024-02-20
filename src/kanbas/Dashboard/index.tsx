@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
-import logo from './images/aerodynamics.png'
+import aerodynamics from './images/aerodynamics.png'
 function Dashboard() {
   return (
     <div className="p-4">
