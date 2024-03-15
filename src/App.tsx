@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Labs from "./labs";
 import HelloWorld from './labs/a3/HelloWorld';

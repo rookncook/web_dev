@@ -6,6 +6,24 @@ import { useParams } from "react-router";
 function ModuleList() {
   const { courseId } = useParams();
   const modulesList = modules.filter((module) => module.course === courseId);
+  const [moduleList, setModuleList] = useState<any[]>(modules);
+  const [module, setModule] = useState({
+    name: "New Module",
+    description: "New Description",
+    course: courseId,
+  });
+
+  const addModule = (module: any) => {
+    console.log(module)
+    const newModule = { ...module,
+      _id: new Date().getTime().toString() };
+    const newModuleList = [newModule, ...moduleList];
+    console.log(newModuleList)
+    setModuleList(newModuleList);
+  };
+
+
+
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <>
@@ -27,8 +45,22 @@ function ModuleList() {
     </div>
       
     <ul className="list-group wd-modules">
-  {modulesList.map((module) => (
-    <li className="list-group-item module-item" onClick={() => setSelectedModule(module)}>
+    <li className="list-group-item">
+        <button onClick={() => { addModule(module) }}>Add</button>
+        
+        <input value={module.name}
+          onChange={(e) => setModule({
+            ...module, name: e.target.value })}
+        />
+        <textarea value={module.description}
+          onChange={(e) => setModule({
+            ...module, description: e.target.value })}
+        />
+      </li>
+
+  {modulesList.filter((module) => module.course === courseId)
+.map((module,index) => (
+    <li key={index} className="list-group-item module-item" onClick={() => setSelectedModule(module)}>
       <div className="module-header">
         <FaEllipsisV className="me-2" />
         <span className="module-name">{module.name}</span>
