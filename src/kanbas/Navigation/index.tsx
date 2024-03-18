@@ -27,7 +27,11 @@ const KanbasNavigation = () => {
   ];
   const { pathname } = useLocation();
   console.log(pathname);
-  console.log(pathname)
+  
+
+  console.log(pathname);
+  console.log(pathname);
+
 
   return (
     <ul className="wd-kanbas-navigation">
