@@ -1,15 +1,138 @@
+/* General Styles */
+.top-buttons {
+  margin: 20px 0;
+  padding-left: 20px;
+}
 
-  .badgecolor{
-    color: whitesmoke !important;
-    background-color: grey;
-  }
+.main-content-assign {
+  margin: 80px 50px 0;
+  padding-right: 50px;
+}
 
-  .custom-green-book{
-    color: green;
+.main-content-1,
+.main-content-2 {
+  margin-top: 30px;
+  min-width: 100px;
+}
 
-  }
+.list-group {
+  padding-top: 50px;
+}
 
-  .text-red {
-    color: red;
-  }
-  
+/* Navigation Styles */
+.wd-navigation {
+  background-color: white;
+  width: 125px;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.wd-navigation li {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.wd-navigation li.wd-active {
+  border-left: 2px solid black;
+}
+
+.wd-navigation li.wd-active a {
+  color: black;
+}
+
+.wd-navigation a {
+  color: rgb(207, 28, 28);
+  text-decoration: none;
+}
+
+/* Button Styles */
+.menu-button {
+  margin-left: 10px;
+}
+
+.menu-button a {
+  color: white;
+}
+
+.down-arrow-menu {
+  margin-right: 10px;
+}
+
+.down-arrow-menu a {
+  color: white;
+}
+
+/* Typography */
+.grey-text {
+  color: grey;
+  width: 700px;
+}
+
+.list-group-item a {
+  color: rgba(31, 30, 30, 0.778) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-group-item p {
+  font-size: 12px;
+}
+
+/* Specific Component Styles */
+.custom-col {
+  padding: -50px; /* This seems incorrect, please review */
+}
+
+.red-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-circle i {
+  color: white;
+  font-size: 20px;
+}
+
+.border-design.list-group-item {
+  border-left: 3px solid #0daf7e;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: rgb(207, 28, 28);
+}
+
+/* Layout Adjustments */
+.header_margin {
+  margin-bottom: 12px;
+  margin-left: 810px;
+}
+
+.title_hd-button {
+  margin-bottom: 10px;
+  margin-left: 800px;
+}
+
+.course-status {
+  margin-top: 50px;
+}
+
+.module-section {
+  margin-top: 0px; /* Did you mean 20px or another value? */
+}
+
+.wd-modules {
+  margin-top: 0px; /* Did you mean 20px or another value? */
+}
+
+.input-group {
+  margin-top: 0px; /* Did you mean 20px or another value? */
+}
