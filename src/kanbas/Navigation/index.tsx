@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import {
@@ -10,6 +11,7 @@ import {
   FaUsers,
   FaQuestionCircle,
 } from "react-icons/fa";
+
 const KanbasNavigation = () => {
   const links = [
     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
@@ -31,7 +33,7 @@ const KanbasNavigation = () => {
         src="/img/northeastern.png"
         className="logo_image"
         alt="Northeastern Logo"
-      ></img>
+      />
       {links.map((link, index) => (
         <li
           key={index}
