@@ -18,4 +18,3 @@ function ObjectStateVariable() {
   );
 }
 export default ObjectStateVariable;
-

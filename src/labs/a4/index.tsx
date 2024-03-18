@@ -10,28 +10,35 @@ import DateStateVariable from "./DateStateVariable";
 import ObjectStateVariable from "./ObjectStateVariable";
 import ArrayStateVariable from "./ArrayStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
+import ReduxExamples from "./ReduxExamples";
+import TodoList from "./ReduxExamples/todos/TodoList";
 
-const sayHello = () => {
-  alert("Hello");
-};
+function Assignment4() {
+  function sayHello() {
+    alert("Hello");
+  }
 
-const Assignment4 = () => {
-  return (
-    <>
-      <h1>Assignment 4</h1>
-      <PassingFunctions theFunction={sayHello} />
-      <ClickEvent />
-      <PassingDataOnEvent />
-      <EventObject/>
-      <Counter/>
-      <BooleanStateVariables/>
-      <StringStateVariables/>
-      <DateStateVariable/>
-      <ObjectStateVariable/>
-      <ArrayStateVariable/>
-      <ParentStateComponent/>
-    </>
-  );
-};
+    return (
+      <div>
+       <h2>Assignment 4</h2>
+       <ClickEvent/>
+       <PassingDataOnEvent/>
+       <PassingFunctions theFunction={sayHello} />
+       <EventObject/>
+       <Counter/>
+       <BooleanStateVariables/>
+       <StringStateVariables/>
+       <DateStateVariable/>
+       <ObjectStateVariable/>
+       <ArrayStateVariable/>
+       <ParentStateComponent/>
+       <ReduxExamples/>
+       <TodoList/>
 
-export default Assignment4;
+
+      </div>
+    );
+  
+  }
+  export default Assignment4;
+  

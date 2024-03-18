@@ -1,14 +1,11 @@
-const add = (a: number, b: number) => {
-    alert(`${a} + ${b} = ${a + b}`);
-  };
-  function PassingDataOnEvent() {
+function PassingDataOnEvent() {
+    const add = (a: number, b: number) => {
+      alert(`${a} + ${b} = ${a + b}`);
+    };
     return (
-        <div>
+      <div>
         <h2>Passing Data on Event</h2>
-        <input type="number" id="inputA" />
-        <input type="number" id="inputB" />
         <button onClick={() => add(2, 3)}
-                // onClick={add(2, 3)}
                 className="btn btn-primary">
           Pass 2 and 3 to add()
         </button>
@@ -16,4 +13,3 @@ const add = (a: number, b: number) => {
     );
   }
   export default PassingDataOnEvent;
-    

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 function BooleanStateVariables() {
   const [done, setDone] = useState(true);
-  
   return (
     <div>
       <h2>Boolean State Variables</h2>

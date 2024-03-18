@@ -2,20 +2,20 @@ function ClickEvent() {
     const hello = () => {
       alert("Hello World!");
     };
-    const lifeIs = (good: string) => {
-      alert(`Life is ${good}`);
+    const good = () => {
+      alert("Life is Good!");
     };
     return (
       <div>
         <h2>Click Event</h2>
         <button onClick={hello}>
-          Click Hello</button>
-        <button onClick={() => lifeIs("Good!")}>
-          Click Good</button>
+          Click Hello 1 </button>
+        <button onClick={() => hello()}>
+          Click Hello 2 </button>
         <button
           onClick={() => {
             hello();
-            lifeIs("Great!");
+            good();
           }}
         >
           Click Hello 3
