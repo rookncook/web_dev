@@ -11,6 +11,7 @@ import {
   FaUsers,
   FaQuestionCircle,
 } from "react-icons/fa";
+import { Console } from "console";
 
 const KanbasNavigation = () => {
   const links = [
@@ -26,6 +27,7 @@ const KanbasNavigation = () => {
   ];
   const { pathname } = useLocation();
   console.log(pathname);
+  console.log(pathname)
 
   return (
     <ul className="wd-kanbas-navigation">
