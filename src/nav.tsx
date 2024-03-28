@@ -1,8 +1,26 @@
 import { Link, useLocation } from "react-router-dom";
-const Nav1 = () => {
+function Nav() {
   const { pathname } = useLocation();
   return (
     <nav className="nav nav-tabs mt-2">
+      <Link
+        to="/Labs/a3"
+        className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
+      >
+        A3
+      </Link>
+      <Link
+        className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
+        to="/Labs/a4"
+      >
+        A4
+      </Link>
+      <Link
+        className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
+        to="/Labs/a5"
+      >
+        A5
+      </Link>
       <Link
         to="/Kanbas"
         className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}
@@ -10,22 +28,13 @@ const Nav1 = () => {
         Kanbas
       </Link>
       <Link
-        to="/Labs/a3"
-        className={`nav-link ${pathname.includes("a3") ? "active" : ""}`}
+        to="/hello"
+        className={`nav-link ${pathname.includes("hello") ? "active" : ""}`}
       >
-        A3
-      </Link>
-      <Link className="nav-link" to="/Labs/a4">
-        A4
-      </Link>
-      <Link
-        to="/Labs/a5"
-        className={`nav-link ${pathname.includes("a5") ? "active" : ""}`}
-      >
-        A5
+        Hello
       </Link>
     </nav>
   );
-};
+}
 
-export default Nav1;
+export default Nav;

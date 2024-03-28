@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import {
@@ -8,12 +7,12 @@ import {
   FaRegCalendarAlt,
   FaInbox,
   FaHistory,
-  FaUsers,
+  FaDesktop,
+  FaArrowCircleRight,
   FaQuestionCircle,
 } from "react-icons/fa";
-import { Console } from "console";
 
-const KanbasNavigation = () => {
+function KanbasNavigation() {
   const links = [
     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
     { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
@@ -21,37 +20,34 @@ const KanbasNavigation = () => {
     { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
     { label: "Inbox", icon: <FaInbox className="fs-2" /> },
     { label: "History", icon: <FaHistory className="fs-2" /> },
-    { label: "Studio", icon: <FaUsers className="fs-2" /> },
-    { label: "Commons", icon: <FaUsers className="fs-2" /> },
+    { label: "Studio", icon: <FaDesktop className="fs-2" /> },
+    { label: "Commons", icon: <FaArrowCircleRight className="fs-2" /> },
     { label: "Help", icon: <FaQuestionCircle className="fs-2" /> },
   ];
   const { pathname } = useLocation();
-  console.log(pathname);
-  
-
-  console.log(pathname);
-  console.log(pathname);
-
-
   return (
     <ul className="wd-kanbas-navigation">
-      <img
-        src="/img/northeastern.png"
-        className="logo_image"
-        alt="Northeastern Logo"
-      />
+      <li>
+        <Link to="http://northeastern.edu">
+          <img className="logo_image" alt="Logo" src="/images/NEULogo.png" />
+        </Link>
+      </li>
       {links.map((link, index) => (
         <li
           key={index}
-          className={pathname.includes(link.label) ? "wd-active" : ""}
+          className={`${pathname.includes(link.label) ? "wd-active" : ""} ${
+            link.label === "Account" && !pathname.includes("Account")
+              ? "account-icon"
+              : ""
+          }`}
         >
-          <Link to={`/Kanbas/${link.label}`} className="white-label">
-            {link.icon} <span>{link.label}</span>
+          <Link to={`/Kanbas/${link.label}`}>
+            <span className="icon">{link.icon}</span>{" "}
+            {link.label ? link.label : null}{" "}
           </Link>
         </li>
       ))}
     </ul>
   );
-};
-
+}
 export default KanbasNavigation;

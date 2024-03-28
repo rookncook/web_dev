@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "name": "kanbas-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP web sever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rookncook/kanbas-node-server-app.git"
+  },
+  "keywords": [
+    "Node",
+    "REST"
+  ],
+  "author": "Charen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rookncook/kanbas-node-server-app/issues"
+  },
+  "homepage": "https://github.com/rookncook/kanbas-node-server-app#readme"
+}

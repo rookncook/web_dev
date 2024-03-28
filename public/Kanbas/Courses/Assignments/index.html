@@ -1,149 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment_base</title>
-</head>
-<body>
-  <input type="text" id="myTextbox" placeholder="Search for Assignments">
+<html>
+  <head>
+    <title>Assignments</title>
+    <style>
+      .flex-container {
+        display: flex;
+        align-items: center;
+      }
 
-  <button>Group</button>
-  <button>Assignment</button>
-  <select id="myDropdown">
-    <option value="" disabled selected>Edit Assignment Dates</option>
-    <!-- <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option> -->
-  </select>
-  <table>
-    <tr>
-      <td><h1>Assignments 40% of total</h1></td>
-      <td>
-        <select id="dropdown_edit">
-          <!-- <option value="" disabled selected>Edit Assignment Dates</option> -->
-          <option value="edit">Edit</option>
-          <option value="speedGrader">Speed Grader</option>
-          <option value="duplicate">Duplicate</option>
-          <option value="delete">Delete</option>
-          <option value="moveTo">Move To...</option>
-          <option value="sendTo">Send To...</option>
-          <option value="copyTo">Copy To...</option>
-          <option value="shareToCommons">Share to Commons</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <ul>
-          <li><strong><a href="#A1">A1 - ENV + HTML:</a></strong> 
-            <br>
-            <a href="#A1">Multiple Modules</a> | <a href="#A1_not_available">Not available yet</a></li>
-          <li><strong><a href="#A2">A2 - CSS + BOOTSTRAP:</a></strong> <br> <a href="#A2">Multiple Modules</a> | <a>Not available yet</a></li>
-          <li><strong><a href="#A3">A3 - JS + REACT:</a></strong> <br> <a href="#A3">Multiple Modules</a> | <a>Not available yet</a></li>
-          <li><strong><a href="#A4">A4 - STATE + REDUX:</a></strong> <br> <a href="#A4">Multiple Modules</a> | <a>Not available yet</a></li>
-          <li><strong><a href="#A5">A5 - NODE + SESSION:</a></strong> <br> <a href="#A5">Multiple Modules</a> | <a >Not available yet</a></li>
-          <li><strong><a href="#A6">A6 - MONGO + MONGOOSE:</a></strong> <br> <a href="#A6">Single Module</a> | <a >Not available yet</a></li>
-        </ul>
-      </td>
-    </tr>
-  
-  <!-- Anchor tags for each module for linking -->
-  <!-- <div id="A1"></div>
-  <div id="A1_not_available"></div>
-  <div id="A2"></div>
-  <div id="A2_not_available"></div>
-  <div id="A3"></div>
-  <div id="A3_not_available"></div>
-  <div id="A4"></div>
-  <div id="A4_not_available"></div>
-  <div id="A5"></div>
-  <div id="A5_not_available"></div>
-  <div id="A6"></div>
-  <div id="A6_not_available"></div> -->
-    <tr>
-      <td><h1>Quizzes 10% of Total</h1></td>
-      <td>
-        <select id="dropdown_edit">
-          <!-- <option value="" disabled selected>Edit Assignment Dates</option> -->
-          <option value="edit">Edit</option>
-          <option value="speedGrader">Speed Grader</option>
-          <option value="duplicate">Duplicate</option>
-          <option value="delete">Delete</option>
-          <option value="moveTo">Move To...</option>
-          <option value="sendTo">Send To...</option>
-          <option value="copyTo">Copy To...</option>
-          <option value="shareToCommons">Share to Commons</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-          <ul>
-            <li><strong><a href="#Q1">Q1 - HTML:</a></strong> 
-              <br>
-              <a href="#Q1">Multiple Modules I</a> | <a>Not available yet</a></li>
-            <li><strong><a href="#Q2">Q2 - CSS:</a></strong> <br> <a href="#Q2">Multiple Modules I</a> | <a>Not available yet</a></li>
-            <li><strong><a href="#Q3">Q3 - JS, ES6:</a></strong> <br> <a href="#Q3">Multiple Modules I</a> | <a>Not available yet</a></li>
-            <li><strong><a href="#Q4">Q4 - NODE:</a></strong> <br> <a href="#Q4">Multiple Modules I</a> | <a>Not available yet</a></li>
-            <li><strong><a href="#Q5">Q5 - MONGO:</a></strong> <br> <a href="#Q5">Multiple Modules</a> | <a >Not available yet</a></li>
-          </ul>
-        </td>
-      </tr>
+      .flex-container > select {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="search" placeholder="Search for Assignments" />
+    <button type="button">Group</button>
+    <button type="button">Assignment</button>
+    <select id="select-one-option">
+      <option selected value="EDITASSD">Edit Assignment Dates</option>
+      <option value="DUM">Dummy</option>
+    </select>
+    <hr style="width: 30%; margin-left: 0" />
 
-      <tr>
-        <td><h1>Exam 20% of Total</h1></td>
-        <td>
-          <select id="dropdown_edit">
-            <!-- <option value="" disabled selected>Edit Assignment Dates</option> -->
-            <option value="edit">Edit</option>
-            <option value="speedGrader">Speed Grader</option>
-            <option value="duplicate">Duplicate</option>
-            <option value="delete">Delete</option>
-            <option value="moveTo">Move To...</option>
-            <option value="sendTo">Send To...</option>
-            <option value="copyTo">Copy To...</option>
-            <option value="shareToCommons">Share to Commons</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-          <td colspan="2">
-            <ul>
-              <li><strong><a href="#midterm">Midterm</a></strong> 
-                <br>
-                <a href="#Q1">Multiple Modules I</a> | <a>Not available yet</a></li>
-              <li><strong><a href="#final">Final</a></strong> <br> <a href="#Q2">Multiple Modules I</a> | <a>Not available yet</a></li>
-            
-            </ul>
-          </td>
-        </tr>
+    <div class="flex-container">
+      <h2>ASSIGNMENTS 40% of Total</h2>
+      <select id="select-one-option">
+        <option selected value="EDIT">Edit</option>
+        <option value="SG">Speed Grader</option>
+        <option value="DUP">Duplicate</option>
+        <option value="DEL">Delete</option>
+        <option value="MOVE">Move To...</option>
+        <option value="SEND">Send To...</option>
+        <option value="COPY">Copy To...</option>
+        <option value="SHARE">Share to Commons</option>
+      </select>
+    </div>
+    <ul>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A1 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A2 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A3 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A4 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A5 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A6 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">A7 - Modules</a>
+        | Not available yet
+      </li>
+    </ul>
 
-              <tr>
-                <td><h1>Project 30% of Total</h1></td>
-                <td>
-                  <select id="dropdown_edit">
-                    <!-- <option value="" disabled selected>Edit Assignment Dates</option> -->
-                    <option value="edit">Edit</option>
-                    <option value="speedGrader">Speed Grader</option>
-                    <option value="duplicate">Duplicate</option>
-                    <option value="delete">Delete</option>
-                    <option value="moveTo">Move To...</option>
-                    <option value="sendTo">Send To...</option>
-                    <option value="copyTo">Copy To...</option>
-                    <option value="shareToCommons">Share to Commons</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                  <td colspan="2">
-                    <ul>
-                      <li><strong><a href="#project">Projct</a></strong> 
-                        <br>
-                        <a href="#Q1">Multiple Modules I</a> | <a>Not available yet</a></li>    
-                    </ul>
-                  </td>
-                </tr>
-  </table>
-</body>
+    <div class="flex-container">
+      <h2>QUIZZES 10% of Total</h2>
+      <select id="select-one-option">
+        <option selected value="EDIT">Edit</option>
+        <option value="SG">Speed Grader</option>
+        <option value="DUP">Duplicate</option>
+        <option value="DEL">Delete</option>
+        <option value="MOVE">Move To...</option>
+        <option value="SEND">Send To...</option>
+        <option value="COPY">Copy To...</option>
+        <option value="SHARE">Share to Commons</option>
+      </select>
+    </div>
+    <ul>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q1 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q2 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q3 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q4 - Modules</a>
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q5 - Modules</a>
+        | Not available yet
+      </li>
+    </ul>
+
+    <div class="flex-container">
+      <h2>EXAMS 20% of Total</h2>
+      <select id="select-one-option">
+        <option selected value="EDIT">Edit</option>
+        <option value="SG">Speed Grader</option>
+        <option value="DUP">Duplicate</option>
+        <option value="DEL">Delete</option>
+        <option value="MOVE">Move To...</option>
+        <option value="SEND">Send To...</option>
+        <option value="COPY">Copy To...</option>
+        <option value="SHARE">Share to Commons</option>
+      </select>
+    </div>
+    <ul>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html"
+          >Midterm Modules</a
+        >
+        | Not available yet
+      </li>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Final Modules</a>
+        | Not available yet
+      </li>
+    </ul>
+
+    <div class="flex-container">
+      <h2>PROJECT 30% of Total</h2>
+      <select id="select-one-option">
+        <option selected value="EDIT">Edit</option>
+        <option value="SG">Speed Grader</option>
+        <option value="DUP">Duplicate</option>
+        <option value="DEL">Delete</option>
+        <option value="MOVE">Move To...</option>
+        <option value="SEND">Send To...</option>
+        <option value="COPY">Copy To...</option>
+        <option value="SHARE">Share to Commons</option>
+      </select>
+    </div>
+    <ul>
+      <li>
+        <a href="/Kanbas/Courses/Assignments/Edit/screen.html"
+          >Project Modules</a
+        >
+        | Not available yet
+      </li>
+    </ul>
+  </body>
 </html>

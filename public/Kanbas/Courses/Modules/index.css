@@ -1,62 +1,32 @@
-/* Reset styles for wd-modules */
 .wd-modules,
 .wd-modules * {
   border-radius: 0%;
   border: none;
-  margin: 0;
-  padding: 0;
-}
-.container{
-    margin: 2rem !important;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* Container styles for wd-modules */
 .wd-modules {
   margin: 5px;
 }
 
-/* List item styles for wd-modules */
 .wd-modules > li {
   background-color: lightgray;
   border: 1px solid gray !important;
   border-left: none !important;
-  margin-bottom: 20px; /* Added margin for spacing between items */
 }
 
-/* Inner div styles for wd-modules */
 .wd-modules > li > div {
   padding: 6px;
   border-left: 1px solid gray !important;
 }
 
-/* List item styles for nested ul in wd-modules */
 .wd-modules > li > ul > li {
   padding: 5px;
   border-top: 1px solid gray !important;
   border-left: 2px solid green;
 }
 
-/* Adjusted margin for btn-container */
-.btn-container {
-  margin-top: 50px;
-  margin: 30px; /* Replaced redundant margin-top with margin */
-}
-
-/* Added margin-left for elements with class "objective" */
-.objective {
-  margin-left: 20px;
-}
-
-/* Adjusted padding for float-end */
-.float-end {
-}
-
-/* Styling for the first element with class "style-first-element" */
-.style-first-element {
-  padding: 20px;
-  background-color: rgb(227, 227, 227);
-}
-
-.margin_new{
-    margin: 20px;
+.wd-modules > li {
+  margin-bottom: 20px;
 }

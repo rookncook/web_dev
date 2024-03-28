@@ -1,145 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Edit</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+      }
+
+      .flex-container > * {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
-    <select id="speedGrader" name="speedGrader">
-      <option value="" disabled selected>SpeedGrader</option>
+    <select id="select-one-option">
+      <option selected value="SG">SpeedGrader</option>
+      <option value="DUM">Dummy</option>
     </select>
+    <hr style="width: 30%; margin-left: 0" />
 
-    <hr>
+    <h2>Assignment Name</h2>
+    <div class="flex-container">
+      <input type="text" value="A1 - ENV + HTML" />
+      <textarea cols="30" rows="10">
+I am meant to be an assignment description .   </textarea
+      >
 
-    <h1>Assignment Name</h1>
+      <label for="points">Points</label>
+      <input type="text" id="points" value="100" />
 
-    <input
-      type="text"
-      id="assignmentName"
-      name="assignmentName"
-      value="A1 - ENV + HTML"
-    />
-
-    <br />
-    <br />
-
-    <input
-      type="text"
-      id="assignmentDescription"
-      name="assignmentDescription"
-      value="this is the assignment description"
-      size="50"
-    />
-
-    <br />
-
-    <p>
-      Points
-      <br />
-      <input type="text" id="pointsInput" name="points" value="100" />
-    </p>
-
-    <p>
-      Assignment Group <br />
-      <select id="assignmentGroup" name="assignmentGroup">
-        <option value="" disabled selected>ASSIGNMENTS</option>
+      <label for="select-one-option">Assignment Group</label>
+      <select id="select-one-option">
+        <option selected value="ASS">ASSIGNMENTS</option>
+        <option value="DUM">Dummy</option>
       </select>
-    </p>
 
-    <p>
-      Display grade as
-      <br />
-      <select id="displayGradeAs" name="displayGradeAs">
-        <option value="" disabled selected>Percentage</option>
+      <label for="select-one-option">Display Grade as</label>
+      <select id="select-one-option">
+        <option selected value="PER">Percentage</option>
+        <option value="DUM">Dummy</option>
       </select>
-    </p>
 
-    <p>
-      Submission Type
-      <br />
-      <select id="submissionType" name="submissionType">
-        <option value="" disabled selected>Online</option>
+      <label for="select-one-option">Submission Type</label>
+      <select id="select-one-option">
+        <option selected value="ONLINE">Online</option>
+        <option value="DUM">Dummy</option>
       </select>
-    </p>
 
-    <p>
-      Online Entry Options
-      <br />
-      <input
-        type="checkbox"
-        id="textEntry"
-        name="textEntry"
-        value="Text Entry"
-      />
-      <label for="textEntry">Text Entry</label>
-      <br />
+      <p>Online Entry Options</p>
 
-      <input
-        type="checkbox"
-        id="websiteURL"
-        name="websiteURL"
-        value="Website URL"
-      />
-      <label for="websiteURL">Website URL</label>
+      <div>
+        <input
+          type="checkbox"
+          value="TEXT"
+          name="check-genre"
+          id="chkbox-text"
+        />
+        <label for="chkbox-text">Text Entry</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          value="WEBSITE"
+          name="check-genre"
+          id="chkbox-website"
+        />
+        <label for="chkbox-website">Website URL</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          value="MEDIA"
+          name="check-genre"
+          id="chkbox-media"
+        />
+        <label for="chkbox-media">Media Recordings</label>
+      </div>
+      <div>
+        <input type="checkbox" value="ANN" name="check-genre" id="chkbox-ann" />
+        <label for="chkbox-ann">Student Annotation</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          value="FILE"
+          name="check-genre"
+          id="chkbox-file"
+        />
+        <label for="chkbox-file">File Uploads</label>
+      </div>
 
-      <br />
+      <label for="assign">
+        Assign <br />
+        Assign to
+      </label>
+      <input type="text" id="assign" value="Everyone" />
 
-      <input
-        type="checkbox"
-        id="mediaRecordings"
-        name="mediaRecordings"
-        value="Media Recordings"
-      />
-      <label for="mediaRecordings">Media Recordings</label>
+      <label for="due"> Due </label>
+      <input type="date" id="due" value="2021-01-01" />
 
-      <br />
+      <label for="due"> Available From </label>
+      <input type="date" id="due" value="2021-01-01" />
 
-      <input
-        type="checkbox"
-        id="studentAnnotation"
-        name="studentAnnotation"
-        value="Student Annotation"
-      />
-      <label for="studentAnnotation">Student Annotation</label>
+      <label for="due"> Until </label>
+      <input type="date" id="due" value="2021-01-01" />
 
-      <br />
-
-      <input
-        type="checkbox"
-        id="fileUploads"
-        name="fileUploads"
-        value="File Uploads"
-      />
-      <label for="fileUploads">File Uploads</label>
-    </p>
-
-    <p>Assign <br />Assign to</p>
-    <input type="text" id="assignTo" name="assignTo" value="Everyone" />
-
-    <p>
-      Due
-      <br />
-      <input type="date" name="dueDate" id="dueDate" value="2021-01-01" />
-    </p>
-
-    <p>
-      Available from <br />
-
-      <input
-        type="date"
-        name="availableFrom"
-        id="availableFrom"
-        value="2021-01-01"
-      />
-    </p>
-
-    <p>
-      Until <br />
-      <input type="date" name="untilDate" id="untilDate" value="2022-01-01" />
-    </p>
-
-    <button>Cancel</button>
-    <button>Save</button>
+      <div>
+        <button type="button">Cancel</button>
+        <button type="button">Save</button>
+      </div>
+    </div>
   </body>
 </html>

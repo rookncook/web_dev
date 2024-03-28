@@ -1,14 +1,11 @@
-import {Link} from "react-router-dom";
-import Nav1 from "../../nav";
+import Nav from "../../Nav";
 
-const HelloWorld = () => {
-    return ( 
-        <div>
-        <Nav1></Nav1>
-        <h1>Hello World!</h1>
-        </div>
-
-     );
+function HelloWorld() {
+  return (
+    <div>
+      <Nav />
+      <h1>Hello World!</h1>
+    </div>
+  );
 }
- 
 export default HelloWorld;

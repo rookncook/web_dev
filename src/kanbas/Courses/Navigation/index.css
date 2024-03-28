@@ -1,9 +1,11 @@
 .wd-navigation {
-    background-color: white;
-    list-style: none;
-    padding: 0px;
-    width: 125px;
-    margin: 0px;
+  width: 100%;
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .wd-navigation li {
   padding-left: 10px;
@@ -19,26 +21,12 @@
   color: black;
 }
 .wd-navigation a {
-  color: red;
+  color: #b12525;
   text-decoration: none;
 }
 
-.top-left-div{
-    margin: 30px ;
-    margin-top: 10px;
-}
-
-.top-bar-course{
-    color: red;
-    font-size: 25px;
-    font-weight: normal;
-
-}
-.last-word{
-    padding-left: 10px;
-    color: black;
-}
-
-.course_name{
-    padding-left: 30px;
+.grey-text {
+  color: rgb(129, 129, 129);
+  margin-left: 1.6em;
+  font-size: 14px;
 }
