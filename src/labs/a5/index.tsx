@@ -1,6 +1,8 @@
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
+import Bro from "./bro";
+import React from "react";
 function Assignment5() {
     return (
       <div>
@@ -8,9 +10,9 @@ function Assignment5() {
         <a href="http://localhost:4000/a5/welcome">
           Welcome
         </a>
-        <EncodingParametersInURLs/>
-        <WorkingWithObjects/>
-        <WorkingWithArrays/>
+        <EncodingParametersInURLs />
+        <WorkingWithObjects />
+        <WorkingWithArrays />
         
       </div>
     );

@@ -1,7 +1,16 @@
-import React, { useState,ChangeEvent } from "react";
+import React, { useState, ChangeEvent, useEffect } from "react";
+import axios from "axios";
+
 function WorkingWithArrays() {
+  interface Todo {
+    id: number;
+    title: string;
+    description: string;
+    due: string;
+    completed: boolean;
+  }
   const API = "http://localhost:4000/a5/todos";
-  const [todo, setTodo] = useState({
+  const [todo, setTodo] = useState<Todo>({
     id: 1,
     title: "NodeJS Assignment",
     description: "Create a NodeJS server with ExpressJS",
@@ -23,11 +32,61 @@ function WorkingWithArrays() {
     });
   };
 
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const fetchTodos = async () => {
+    const response = await axios.get(API);
+    setTodos(response.data);
+  };
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+  
+  const removeTodo = async (todo: Todo) => {
+    const response = await axios.get(`${API}/${todo.id}/delete`);
+    setTodos(response.data);
+  };
 
+  const createTodo = async () => {
+    const response = await axios.get(`${API}/create`);
+    setTodos(response.data);
+  };
+
+  const fetchTodoById = async (id: number) => {
+    const response = await axios.get(`${API}/${id}`);
+    setTodo(response.data);
+  };
+  const updateTitle = async () => {
+    const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
+    setTodos(response.data);
+  };
+
+  
 
   return (
     <div>
       <h3>Working with Arrays</h3>
+      <ul className="list-group">
+      <button className="btn btn-primary"onClick={createTodo} >
+        Create Todo
+      </button>
+      <button className="btn btn-primary" onClick={updateTitle} >
+        Update Title
+      </button>
+
+        {todos.map((todo) => (
+          <li key={todo.id} className="list-group-item">
+            
+            {todo.title}
+            <button className="btn btn-warning m-2" onClick={() => fetchTodoById(todo.id)} >
+          Edit
+        </button>
+            <button className="btn btn-primary m-2"onClick={() => removeTodo(todo)} >
+          Remove
+        </button>
+          </li>
+        ))}
+      </ul>
+
       <h4>Retrieving an Item from an Array by ID</h4>
       <input
         value={todo.id}
