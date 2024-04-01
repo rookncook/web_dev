@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import {
   FaCheckCircle,
   FaEllipsisV,
@@ -10,13 +11,28 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { KanbasState } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteAssignment } from "./assignmentsReducer";
 import "./index.css";
 import { Button, Modal } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
+import * as client from "./client";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentsReducer";
+import { findAssignmentsForCourse } from "./client";
+
 
 function Assignments() {
   const { courseId } = useParams();
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignment) =>
+        dispatch(setAssignment(assignment))
+    );
+  }, [courseId]);
+  
   const [deleteAssignmentID, setDeleteAssignmentID] = useState(null);
   const [assignmentToDelete, setAssignmentToDelete] = useState("");
   const [displayModal, setDisplayModal] = useState(false);
@@ -25,7 +41,7 @@ function Assignments() {
   const assignmentList = useSelector(
     (state: KanbasState) => state.assignmentsReducer.assignments
   ).filter((assignment: { course: string }) => assignment.course === courseId);
-
+  
   const openModal = (
     courseId: React.SetStateAction<null>,
     courseTitle: React.SetStateAction<string>
