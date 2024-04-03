@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaCheckCircle,
   FaEllipsisV,
@@ -11,37 +10,26 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { KanbasState } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
 import "./index.css";
 import { Button, Modal } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import * as client from "./client";
-import {
-  addAssignment,
-  deleteAssignment,
-  updateAssignment,
-  setAssignment,
-} from "./assignmentsReducer";
-import { findAssignmentsForCourse } from "./client";
-
 
 function Assignments() {
   const { courseId } = useParams();
-  useEffect(() => {
-    findAssignmentsForCourse(courseId)
-      .then((assignment) =>
-        dispatch(setAssignment(assignment))
-    );
-  }, [courseId]);
-  
   const [deleteAssignmentID, setDeleteAssignmentID] = useState(null);
   const [assignmentToDelete, setAssignmentToDelete] = useState("");
   const [displayModal, setDisplayModal] = useState(false);
+  const assignment = useSelector(
+    (state: KanbasState) => state.assignmentsReducer.assignment
+  );
 
   const dispatch = useDispatch();
   const assignmentList = useSelector(
     (state: KanbasState) => state.assignmentsReducer.assignments
   ).filter((assignment: { course: string }) => assignment.course === courseId);
-  
+
   const openModal = (
     courseId: React.SetStateAction<null>,
     courseTitle: React.SetStateAction<string>
@@ -54,6 +42,22 @@ function Assignments() {
   const closeModal = () => {
     setDisplayModal(false);
   };
+
+  const handleDeleteAssignment = (assignmentId: string | null) => {
+    if (assignmentId == null) {
+      console.error("assignmentId is null");
+      return;
+    }
+    client.deleteAssignment(assignmentId).then((assignment) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
+  useEffect(() => {
+    client
+      .findAssignmentsForCourse(courseId)
+      .then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
 
   return (
     <>
@@ -150,7 +154,7 @@ function Assignments() {
             className="btn btn-danger"
             onClick={() => {
               closeModal();
-              dispatch(deleteAssignment(deleteAssignmentID));
+              handleDeleteAssignment(deleteAssignmentID);
             }}
           >
             Yes
