@@ -2,13 +2,13 @@ import axios from "axios";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
 
-const COURSES_API = `${API_BASE}/api/courses`;
-const ASSIGNMENT_API = `${API_BASE}/api/assignments`;
+// const COURSES_API = `${API_BASE}/api/courses`;
+// const ASSIGNMENT_API = `${API_BASE}/api/assignments`;
 
-// const COURSES_API =
-//   "https://kanbas-node-server-app-bh73.onrender.com/api/courses";
-// const ASSIGNMENT_API =
-//   "https://kanbas-node-server-app-bh73.onrender.com/api/assignments";
+const COURSES_API =
+  "https://kanbas-node-server-app-bh73.onrender.com/api/courses";
+const ASSIGNMENT_API =
+  "https://kanbas-node-server-app-bh73.onrender.com/api/assignments";
 
 interface Assignment {
   _id: string;
