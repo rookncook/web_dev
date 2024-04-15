@@ -5,6 +5,8 @@ import cors from "cors";
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
 import AssignmentRoutes from './Kanbas/assignments/routes.js';
+import UserRoutes from "./Users/routes.js";
+
 
 const app = express()
 app.use(cors())
@@ -13,5 +15,6 @@ CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
 Lab5(app);
-Hello(app)
+Hello(app);
+UserRoutes(app);
 app.listen(4000);
