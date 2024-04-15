@@ -8,6 +8,7 @@ import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Account from "./Account";
 
 export default function Kanbas() {
   const [courses, setCourses] = useState<any[]>([]);
@@ -31,26 +32,19 @@ export default function Kanbas() {
 
   const addNewCourse = async () => {
     const response = await axios.post(COURSES_API, course);
-    setCourses([ ...courses, response.data ]);
+    setCourses([...courses, response.data]);
   };
 
   // const deleteCourse = (courseId: any) => {
   //   setCourses(courses.filter((course) => course._id !== courseId));
   // };
   const deleteCourse = async (courseId: string) => {
-    const response = await axios.delete(
-      `${COURSES_API}/${courseId}`
-    );
-    setCourses(courses.filter(
-      (c) => c._id !== courseId));
+    const response = await axios.delete(`${COURSES_API}/${courseId}`);
+    setCourses(courses.filter((c) => c._id !== courseId));
   };
 
-  
   const updateCourse = async () => {
-    const response = await axios.put(
-      `${COURSES_API}/${course._id}`,
-      course
-    );
+    const response = await axios.put(`${COURSES_API}/${course._id}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -61,13 +55,13 @@ export default function Kanbas() {
     );
   };
 
-
   return (
     <Provider store={store}>
       <div className="d-flex">
         <KanbasNavigation />
         <div style={{ flexGrow: 1 }}>
           <Routes>
+            <Route path="/Account/*" element={<Account />} />
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route path="Account" element={<h1>Account</h1>} />
             <Route
@@ -83,10 +77,7 @@ export default function Kanbas() {
                 />
               }
             />
-            <Route
-              path="Courses/:courseId/*"
-              element={<Courses/>}
-            />
+            <Route path="Courses/:courseId/*" element={<Courses />} />
           </Routes>
         </div>
       </div>
